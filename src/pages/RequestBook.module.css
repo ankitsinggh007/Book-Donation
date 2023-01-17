@@ -1,0 +1,87 @@
+.card{
+    border: 1px solid black;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Container{
+display: flex;
+}
+.card img{
+height: 250px;
+width: 200px;
+
+
+}
+.details{
+    display:flex;
+    font-weight: 600;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+.Main {
+    height: 100vh;
+    padding: 30px;
+}
+.header{
+    border: 1px solid black;
+    height: 7rem;
+    align-items: center;
+    background-color: rgb(56, 53, 53);
+    color: white;
+    font-family: roboto;
+    font-size: x-large;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.header span{
+    margin-left: 10px;
+}
+.header button{
+    margin-right: 30px;
+}
+.Course {
+    margin-top: 50px;
+    display: flex;
+    width: 93vw;
+}
+
+.Welcome {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.Body {
+    width: 50%;
+    height: 100%;
+    line-height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.Body img {
+    width: 196px;
+    height: 120px;
+
+}
+
+.Card {
+    /* border */
+}
+
+.Button {
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: white;
+    background-color: #3B71CA;
+    height: 20px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+}

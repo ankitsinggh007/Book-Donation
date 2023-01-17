@@ -1,0 +1,50 @@
+.form{
+    width: 50vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 84.9vh;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+    border-radius: 10px;
+}
+.background{
+    background-image: url("../Media/Help.jpg");
+    background-size: contain;
+}
+.form div{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-size: 1.5rem;
+    height: 4rem;
+}
+.form legend{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #3B71CA;
+}
+.form button{
+    width: fit-content;
+    padding: 10px;
+    background-color:  #3B71CA;
+    color: white;
+    font-size: large;
+    
+
+}
+.form input{
+    padding: 5px;
+    width: 70%;
+    height: 100%;
+}
+.form label{
+    font-weight: 500;
+}

@@ -1,0 +1,14 @@
+.LandingPage {
+    height: 80vh;
+    display: flex;
+    background-image: url("../Media/LandingBanner.svg");
+    justify-content: center;
+    background-size: cover;
+    padding: 5px;
+}
+
+.Slogan {
+    color: black;
+    font-size: 3rem;
+    width: 70%;
+}

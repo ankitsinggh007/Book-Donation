@@ -13,7 +13,7 @@ font-size: large;
 }
 .Container{
     display: flex;
-
+flex-wrap: wrap;
 }
 .Image{
     width: 60%;

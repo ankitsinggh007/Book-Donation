@@ -1,14 +1,17 @@
 .LandingPage {
     height: 80vh;
     display: flex;
+    width: auto;
     background-image: url("../Media/LandingBanner.svg");
     justify-content: center;
-    background-size: cover;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 5px;
 }
 
 .Slogan {
     color: black;
-    font-size: 3rem;
+    font-size: 3em;
     width: 70%;
 }

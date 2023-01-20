@@ -15,7 +15,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Form from "./component/Form";
 import AdminBooks from "./pages/AdminBooks";
 import Book from "./pages/Book"
-
+import { Helmet } from "react-helmet";
 
 
 export const User = createContext({});
@@ -99,7 +99,9 @@ function App() {
   return (
     <MDBContainer fluid>
       <User.Provider value={{ Creadential, setCreadential, createUser, verifyCredential, LoggedInUserData, setLoggedInUserData }}>
-
+      <Helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</Helmet>
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />

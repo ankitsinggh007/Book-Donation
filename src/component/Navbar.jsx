@@ -49,11 +49,13 @@ const Navbar = () => {
             <li>
               <NavLink to={`home/${LoggedInUserData.Role}`} activeStyle={{color:'red'}}  ><AiFillHome  style={{marginBottom:"7px"}}/>&nbsp;Home</NavLink>
             </li>
-            
+           <li>
+            <Button onClick={Logout } style={{backgroundColor:"#3B71CA",color:"white",margin:"30px",fontSize:"1.5rem",height:"auto",width:"auto"}}>{LoggedInUserData.isAuthrized?"Log Out":"Log In" }
+</Button>
+             </li>
           </ul>
         </div>
-      <Button onClick={Logout } style={{backgroundColor:"#3B71CA",color:"white",margin:"30px",fontSize:"1.5rem",height:"auto",width:"auto"}}>{LoggedInUserData.isAuthrized?"Log Out":"Log In" }
-</Button>
+      
         {/* 3rd social media links */}
         <div className="social-media">
 

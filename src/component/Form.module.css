@@ -48,3 +48,56 @@
 .form label{
     font-weight: 500;
 }
+@media screen and (max-width:770px){
+.form{
+    width:auto;
+    background-color: rgba(255,255,255,.9);
+    height: 100vh;
+}    
+.Category{
+    display: flex;
+    flex-direction: column;
+}
+.Semester{
+    display: flex;
+    flex-direction: column;
+}
+.Semester select{
+    margin-left:100px;
+}
+.Thumbnail{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+}
+.Pages{
+    display: flex;
+    flex-direction: column;
+}
+.Adress{
+    display: flex;
+    flex-direction: column;
+}
+.id{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    padding: 5px;
+    width: auto;
+    height: auto;
+}
+
+.form button{
+    width: fit-content;
+    margin-top: 15px;
+    background-color:  #3B71CA;
+    color: white;
+    font-size: small;
+    
+
+}
+}

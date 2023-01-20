@@ -3,56 +3,60 @@
     padding: 30px;
 }
 .header{
-    border: 1px solid black;
     height: 7rem;
     align-items: center;
     background-color: rgb(56, 53, 53);
     color: white;
-    font-family: roboto;
     font-size: x-large;
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .header span{
     margin-left: 10px;
 }
-.header button{
-    margin-right: 30px;
+.admin{
+    margin-right: 20px;
 }
+
 .Course {
     display: flex;
-    width: 90%;
+    flex-direction: row;
+    width: 98%;
     margin: 50px auto;
+    justify-content: space-between;
+
 }
 
 .Welcome {
-    font-size: 2rem;
+    font-size: 3vw;
     font-weight: 500;
 }
 
 .Body {
-    width: auto;
-    height: auto;
-    line-height: 25px;
-    border-radius: 5px;
-    margin-left: 20px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    line-height: 20px;
+    border-radius: 7px;
     transform: translateX(0px);
     transition: all 1s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Body img {
-    width: 100%;
+    width: 200px;
     height: 240px;
 
 }
 :hover .Body{
     transform: translateX(5px);
-}
-
-
-.Button {
+}.Button {
     padding: 10px;
     padding-left: 14px;
     padding-right: 14px;
@@ -61,4 +65,21 @@
     height: 20px;
     font-size: 1.2rem;
     border-radius: 4px;
+}
+@media screen and (max-width:728px) {
+    .Course{
+        flex-wrap: wrap;
+    }
+    .header{
+    font-size:small;
+    height: fit-content;
+    margin-bottom:1px;
+
+    }
+    .admin{
+        font-size:small;
+        margin: 5px;
+    }
+    
+    
 }

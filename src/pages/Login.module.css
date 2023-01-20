@@ -1,26 +1,35 @@
-.Box{
+.Box {
     width: 35%;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
-    height:45vh;
-    margin: auto auto;
+    height: 45vh;
     border-radius: 10px;
-font-size: large;
-
+    font-size: large;
+    margin: auto auto;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.Container{
+.Container {
     display: flex;
-flex-wrap: wrap;
+    height: 85vh;
+    flex-wrap: wrap;
+    background-image: url("../Media/LoginBanner.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.Image{
-    width: 60%;
-}
-.mb-4{
+.mb-4 {
     padding: 5px;
 }
-#form7Example1{
-    
+@media screen and (max-width:580px){
+ .Box{
+    width:auto;
+    margin:auto;
+ }
+ .Container{
+    height:90vh;
+    background-size: contain;
+ }   
 }

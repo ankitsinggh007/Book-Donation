@@ -1,6 +1,9 @@
 .card {
-    border: 1px solid black;
+    border: 1px solid grey;
+    border-radius: 7px;
     display: flex;
+    height: fit-content;
+    width: max-content;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -27,7 +30,7 @@
 }
 
 .card img {
-    height: 250px;
+    height: 200px;
     width: 200px;
 
 
@@ -133,5 +136,17 @@
 }
 .nothing span {
     font-size: 2.7rem;
+    
+}
+@media screen and (max-width: 768px) {
+    .card{
+        margin: 10px auto;
+    }
+    .nothing{
+        background-size: cover;
+        background-position: center;
+        color: black;
+        
+    }
     
 }

@@ -1,16 +1,20 @@
 .card{
-    border: 1px solid black;
+    border: 1px solid grey;
     display: flex;
     justify-content:space-between;
+    flex-wrap: wrap;
+    height: auto;
     align-items: center;
     flex-direction: column;
-    margin-right: 10px;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px auto;
 }
 .Container{
 display: flex;
+flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
 }
 .card img{
 height: 250px;
@@ -71,9 +75,7 @@ width: 200px;
 
 }
 
-.Card {
-    /* border */
-}
+
 
 .Button {
     padding: 10px;
@@ -97,14 +99,26 @@ width: 200px;
 }
 .nothing {
     background-image: url("../Media//Reciever.jpg");
-    background-size: contain;
+    background-size: cover;
     margin-left: 20vw;
-    width: 60vw;
+    width: 100vw;
     height: 90vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .nothing span {
-    font-size: 2.7rem;
+    font-size: 3rem;
+    margin-right: 300px;
+    margin-bottom: 200px;
+    
+}
+@media screen and (max-width:500px){
+    .nothing{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+    }
     
 }

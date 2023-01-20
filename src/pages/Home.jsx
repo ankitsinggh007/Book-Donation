@@ -1,8 +1,8 @@
-import React,{useContext, useEffect} from 'react'
+import React,{useContext, useEffect, useState} from 'react'
 import classes from "./Home.module.css"
 import BCA from "../Media/BCA.png"
-import BBA from "../Media/BBA.jpg"
-import BCOM from "../Media/BCOM.webp"
+import BBA from "../Media/BBA.png"
+import BCOM from "../Media/BCOM.jpg"
 import { User } from '../App'
 import {  useLocation, useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
@@ -10,12 +10,25 @@ import {IoBookSharp} from "react-icons/io5"
 import {MdAdminPanelSettings} from "react-icons/md"
 import { Button } from 'reactstrap'
 import {GoRequestChanges} from "react-icons/go"
+import { GiConsoleController } from 'react-icons/gi'
 function Home() {
 const {LoggedInUserData, setLoggedInUserData,createUser}=useContext(User);
     const Navigate=useNavigate();
 const {UserRole}=useParams();
 
     const link=useLocation();
+const [Width, setWidth] = useState(Window.innerWidth);
+    useEffect(()=>{
+        if(Width<776){
+            GiConsoleController.log("hi")
+        }
+
+    },[]);
+console.log(Width)
+
+
+
+
 
     return (
         <div className={classes.Main}>
@@ -24,8 +37,8 @@ const {UserRole}=useParams();
             <>
              <div className={classes.header}>
                 <span className={classes.admin} ><MdAdminPanelSettings/>Donor</span>
-                <Link to={"Request"} style={{fontSize:"1.3rem",color:"white"}} >Request< GoRequestChanges/></Link>
-                <Button style={{fontSize:"1.3rem"}} onClick={()=>{Navigate(`/home/${UserRole}/Books`)}}>Books you donated < IoBookSharp/></Button>
+                <Link to={"Request"} className={classes.admin} >Request< GoRequestChanges/></Link>
+                <Button className={classes.admin1}  onClick={()=>{Navigate(`/home/${UserRole}/Books`)}}>Books you donated < IoBookSharp/></Button>
 
             </div>
            {LoggedInUserData.Role==="Donor" &&<span className={classes.Welcome}>{`hi,${LoggedInUserData.firstName}  today which book you want to donate,make sure you store book in correct option as given below`}</span>}
@@ -77,8 +90,8 @@ const {UserRole}=useParams();
            <>
             <div className={classes.header}>
                 <span className={classes.admin}><MdAdminPanelSettings/>Reciever</span>
-                <Button style={{fontSize:"1.3rem"}} onClick={()=>{Navigate(`/home/${UserRole}/accept`)}}>accepted books< GoRequestChanges/></Button>
-                <Button style={{fontSize:"1.3rem"}} onClick={()=>{Navigate(`/home/${UserRole}/Request`)}}>Pending request < IoBookSharp/></Button>
+                <Button className={classes.admin} onClick={()=>{Navigate(`/home/${UserRole}/accept`)}}>accepted books< GoRequestChanges/></Button>
+                <Button className={classes.admin} onClick={()=>{Navigate(`/home/${UserRole}/Request`)}}>Pending request < IoBookSharp/></Button>
 
             </div>
            {LoggedInUserData.Role==="Donor" &&<span className={classes.Welcome}>{`hi,${LoggedInUserData.firstName}  today which book you want to donate,make sure you store book in correct option as given below`}</span>}

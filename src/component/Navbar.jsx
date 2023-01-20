@@ -33,7 +33,7 @@ const Navbar = () => {
     <>
       <nav className="main-nav"  >
         {/* 1st logo part  */}
-        <NavLink to="/" className="logo">
+        <NavLink to="/" >
           <h2>
             <span>B</span>ook
             <span>D</span>onation
@@ -41,31 +41,13 @@ const Navbar = () => {
         </NavLink>
 
         {/* 2nd menu part  */}
-        <div
-          className={
-            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }>
-          <ul>
-            <li>
+             
               <NavLink to={`home/${LoggedInUserData.Role}`} activeStyle={{color:'red'}}  ><AiFillHome  style={{marginBottom:"7px"}}/>&nbsp;Home</NavLink>
-            </li>
-           <li>
-            <Button onClick={Logout } style={{backgroundColor:"#3B71CA",color:"white",margin:"30px",fontSize:"1.5rem",height:"auto",width:"auto"}}>{LoggedInUserData.isAuthrized?"Log Out":"Log In" }
+            <Button onClick={Logout } className="login" >{LoggedInUserData.isAuthrized?"Log Out":"Log In" }
 </Button>
-             </li>
-          </ul>
-        </div>
       
         {/* 3rd social media links */}
-        <div className="social-media">
-
-          {/* hamburget menu start  */}
-          <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
-            </a>
-          </div>
-        </div>
+        
       </nav>
 
       {/* hero section  */}

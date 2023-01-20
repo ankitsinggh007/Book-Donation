@@ -94,7 +94,6 @@ style={{height:"40px",fontSize: '16px'}}
         </MDBTabsContent>
       </div>
       <div className={classes.Image}>
-        <img src={LoginBanner} width="100%" />
 
 
       </div>

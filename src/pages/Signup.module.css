@@ -14,9 +14,6 @@ font-size: large;
     display: flex;
     height: auto;
     padding: 10px;
-
-
-
 }
 #form8Example1{
     font-size: 2rem;
@@ -24,4 +21,14 @@ font-size: large;
 
 .Image {
     width: 60%;
+}
+@media screen and (max-width:770px) {
+    .Box{
+        margin: auto;
+        width: auto;
+    }
+    .Image{
+        display: none;
+    }
+    
 }

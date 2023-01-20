@@ -7,6 +7,7 @@ import { Button } from 'reactstrap'
 import { useNavigate, useParams } from 'react-router-dom';
 import { doc, getDoc,updateDoc } from "firebase/firestore";
 import db from '../component/Firbase';
+import Swal from 'sweetalert2';
 
 
 function AdminBooks() {
@@ -76,6 +77,13 @@ function AdminBooks() {
                 console.log(e)
             }
             setprop({text:"Pending...",disabled:true,color:"grey"})
+            await Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: `Request has been sent for ${obj.Title}`,
+              showConfirmButton: true,
+              timer: 1500
+            })
         }
 
 console.log(LoggedInUserData)
@@ -115,7 +123,7 @@ const Navigate=useNavigate();
 
 </span>
      </span>
-     <div onClick={(e)=>Request(obj,e)} disabled={prop.disabled}  style={{backgroundColor:`${prop.color}`}}className={classes.action}>{prop.text}</div>
+     <div onClick={(e)=>Request(obj,e)}   className={classes.action}>request</div>
  </div>
              )
          })
@@ -208,7 +216,7 @@ const Navigate=useNavigate();
      {
       LoggedInUserData.Cart.length===0 &&
       <div className={classes.nothing}>
-        <span>Request a book </span>
+        <span>You don't request a book </span>
       </div>
 
      }

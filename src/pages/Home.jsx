@@ -48,8 +48,8 @@ console.log(Width)
                     <div class="card" className={classes.Body}>
                         <img src={BCOM} class="card-img-top" alt="BCA" />
                         <div class="card-body">
-                            <h5 class="card-title">Bachelors's in Computer Application</h5>
-                            <p class="card-text">A Bachelor of Computer Applications (BCA) is a undergraduate degree course in computer applications.</p>
+                            <h5 class="card-title">Bachelor of Commerce</h5>
+                            <p class="card-text">A Bachelor of Commerce (BCom) is an undergraduate degree in commerce and related subjects</p>
                             <Link to={`${link.pathname}/Bcom`} class="btn btn-primary"className={classes.Button}>Donate</Link>
                             
                         </div>
@@ -63,8 +63,8 @@ console.log(Width)
                 <div class="card" className={classes.Body}>
                         <img src={BBA} class="card-img-top" alt="BBA" />
                         <div class="card-body">
-                            <h5 class="card-title">Bachelors's in Computer Application</h5>
-                            <p class="card-text">A Bachelor of Computer Applications (BCA) is a undergraduate degree course in computer applications.</p>
+                            <h5 class="card-title">Bachelor of Business Administration</h5>
+                            <p class="card-text">A Bachelor of Business Administration (BBA) is an undergraduate degree program in business management. </p>
                             <Link to={`${link.pathname}/Bba`} class="btn btn-primary"className={classes.Button}>Donate</Link>
                     
                         </div>
@@ -101,8 +101,8 @@ console.log(Width)
                     <div class="card" className={classes.Body}>
                         <img src={BCOM} class="card-img-top" alt="BCA" />
                         <div class="card-body">
-                            <h5 class="card-title">Bachelors's in Computer Application</h5>
-                            <p class="card-text">A Bachelor of Computer Applications (BCA) is a undergraduate degree course in computer applications.</p>
+                            <h5 class="card-title">Bachelor of Commerce</h5>
+                            <p class="card-text">A Bachelor of Commerce (BCom) is an undergraduate degree in commerce and related subjects.</p>
                             <Link to={`${link.pathname}/Bcom`} class="btn btn-primary"className={classes.Button}>Get</Link>
                             
                         </div>
@@ -116,8 +116,8 @@ console.log(Width)
                 <div class="card" className={classes.Body}>
                         <img src={BBA} class="card-img-top" alt="BBA" />
                         <div class="card-body">
-                            <h5 class="card-title">Bachelors's in Computer Application</h5>
-                            <p class="card-text">A Bachelor of Computer Applications (BCA) is a undergraduate degree course in computer applications.</p>
+                            <h5 class="card-title"> Bachelor of Business Administration </h5>
+                            <p class="card-text">A Bachelor of Business Administration (BBA) is an undergraduate degree program in business management. </p>
                             <Link to={`${link.pathname}/Bba`} class="btn btn-primary"className={classes.Button}>Get</Link>
                     
                         </div>

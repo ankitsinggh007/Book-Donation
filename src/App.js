@@ -17,6 +17,7 @@ import AdminBooks from "./pages/AdminBooks";
 import Book from "./pages/Book"
 import { Helmet } from "react-helmet";
 
+import Swal from "sweetalert2";
 
 export const User = createContext({});
 
@@ -43,7 +44,9 @@ function App() {
     querySnapshot.forEach((doc) => {
       setLoggedInUserData({ ...LoggedInUserData, ...doc.data(), isAuthrized: true, id: doc.id });
       Navigate(`/home/${doc.data().Role}`)
+      
   });
+  
   }
 
   // Creat user in DataBase
@@ -60,6 +63,13 @@ function App() {
       Request:[]
       
     });
+    await Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Registered successfully!',
+  showConfirmButton: true,
+      })
+
     Navigate("/login")
   }
 
@@ -75,7 +85,13 @@ function App() {
         const errorCode = error.code;
         const errorMessage = error.message;
         setCreadential({ ...Creadential, message: errorCode.split("/")[1] })
-
+      Swal.fire({
+  position: 'center',
+  icon: 'error',
+  timer: 1500,
+  title: `error: ${errorCode.split("/")[1]}`,
+  showConfirmButton: true,
+})
       });
   }
   // Login User
@@ -84,7 +100,13 @@ function App() {
       .then((userCredential) => {
         const user = userCredential.user;
         FetchData(user.email);
-
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Logged In successfully!',
+          showConfirmButton: true,
+          timer:1500,
+        })
         Navigate("/")
       })
       .catch((error) => {

@@ -86,6 +86,7 @@ function Signup() {
     }
 
   }
+  console.log(Creadential,"Creadential")
   return (
     <div className={classes.Container}>
       <div className={classes.Box}>
